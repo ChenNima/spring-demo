@@ -51,6 +51,6 @@ public abstract class AbstractEntity {
 
     @PrePersist
     public void preInsert() {
-        // setCreatedAt(System.currentTimeMillis());
+        setCreatedAt(System.currentTimeMillis());
     }
 }

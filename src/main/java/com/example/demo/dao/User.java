@@ -9,6 +9,7 @@ import javax.persistence.Table;
 public class User extends AbstractEntity {
 
     private String email;
+    // @JsonIgnore
     private String password;
     private String name;
 
