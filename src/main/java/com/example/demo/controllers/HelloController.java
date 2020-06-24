@@ -32,7 +32,7 @@ public class HelloController {
   User getByEmail(@PathVariable String email) {
     return userService.getByEmail(email);
 	}
-	
+
 	@PostMapping("/users")
   User newEmployee(@RequestBody User newUser) {
 		User userSaved = userService.register(newUser);

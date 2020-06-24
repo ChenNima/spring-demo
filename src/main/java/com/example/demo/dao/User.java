@@ -4,6 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 @Entity
 @Table(name="users")
 public class User extends AbstractEntity {
@@ -26,6 +29,7 @@ public class User extends AbstractEntity {
     }
 
     @Column(nullable = false, length = 100)
+    @JsonProperty(access = Access.WRITE_ONLY)
     public String getPassword() {
         return password;
     }
